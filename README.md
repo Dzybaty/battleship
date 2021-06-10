@@ -1,8 +1,8 @@
-# A Battleship Game
+# Battleship Game
 Realisation of classic turn-based Battleship game for two local players as web-app created on React.
 
 ## Installation
-Firstly, install all dependencies with `yarn start` or `yarn install`.
+Firstly, install all dependencies with `yarn` or `yarn install`.
 
 Then run the project with `yarn start` and proceed to [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
@@ -17,12 +17,12 @@ The other player also tries to hit your ships by calling out coordinates.
 Neither you nor the other player can see each other's field so you must try to guess where they are.
 
 ### Game Process
-The game consists of two main phases: _Preparation Phase_ and _Game phase_.
+The game consists of two main phases: [Preparation Phase](#Preparation-Phase) and [Game Phase](#Game-Phase).
 
 #### Preparation Phase
 Each player places the 5 ships somewhere on their [Field](#Fields).
 
-During this phase player should place all his ships on the field by dragging
+During this phase player should place all his ships on his [Field](#Fields) by dragging
 each ship from his [Fleet](#Fleet);
 
 Ship names, sizes and count:
@@ -41,10 +41,10 @@ Basic placement rules:
 - No ships can be placed on another ship
 - A minimum space between ships is one cell
 
-After first player has placed all his ships, a [Prompt](#Next Turn Prompt) will appear.
+After first player has placed all his ships, a [Prompt](#Next-Turn-Prompt) will appear.
 The prompt serves two purposes:
 - Prevent a player from revealing another player's board.
-- Give the next player some tim to prepare for his turn.
+- Give the next player some time to prepare for his turn.
 
 When the second player has finished his placement, the next phase starts.
 
@@ -53,7 +53,7 @@ During this phase each player have two boards:
 - their own [Field](#Fields) (left one) which shows his placement and enemy hits.
 - enemy [Field](#Fields) (right one) which does not show enemy ship placement and is used for making strikes.
 
-Each turn player should click any cell on the enemy [Field](#Fields) trying to hit opponents ship.
+Each turn player should click on any cell on the enemy [Field](#Fields) trying to hit opponent's ship.
 Every successful hit will be marked on the enemy field with `X` symbol. After successful hit, player can
 make another attempt until he misses.
 
@@ -62,26 +62,26 @@ asking another player to prepare for his turn.
 
 #### Game ending
 The game ends, when one of players destroys all opponent ships (19 cells). After the last successful hit,
-a [Window](#Game Results) with game results will appear. Anew game can be started here. 
+a [Window](#Game-Results) with game results will appear. Anew game can be started here. 
 
 ## User Interface
 
 ### Header
 Located at the top of page it shows current game phase and player. It also shows short player statistics
-during the [Game Phase](#Game Phase).
+during the [Game Phase](#Game-Phase).
 Also, the current game can be restarted by pressing *Reset Game* button in the right corner.
 
 ### Fields
-During the [Preparation Phase](#Preparation Phase) there is one field where player's ships should be placed.
+During the [Preparation Phase](#Preparation-Phase) there is one field where player's ships should be placed.
 Its size is 10x10 cells.
 
-During the [Game Phase](#Game Phase) there are two fields. The left one is player's own - it shows his
+During the [Game Phase](#Game-Phase) there are two fields. The left one is player's own - it shows his
 ship's placement and enemy hits and misses. The right one is his opponent's field - it is used for making strikes
 and tracking player's hits and misses.
 
 ### Fleet
-Is shown during the [Preparation Phase](#Preparation Phase). It contains all player's
-ships. Ships can be placed on the [Field](#Fields) by dragging to the field cell.
+Fleet panel is shown during the [Preparation Phase](#Preparation-Phase). It contains all player's
+ships. Ships can be placed on the [Field](#Fields) by dragging them to the player's field cell, according to the rules.
 Already placed ships are not able to drag.
 
 ### Next Turn Prompt
@@ -89,5 +89,5 @@ At the end of every turn, the prompt will appear, blocking visibility of previou
 for another player to prepare. Next turn can be started by clicking **Ready** button.
 
 ### Game Results
-At the end of the game a window with game results will appear. It shows the winner and miss/hit/total shots
+At the end of the game a window with game results will appear. It shows the winner and miss/hit/total shots statistics
 for each player. The game can be restarted by clicking **Reset Game Button**.
