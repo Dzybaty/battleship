@@ -1,0 +1,3 @@
+export const MODAL_NEXT_PHASE = 'MODAL_NEXT_PHASE';
+export const MODAL_NEXT_TURN = 'MODAL_NEXT_TURN';
+export const MODAL_ENDGAME = 'MODAL_ENDGAME';

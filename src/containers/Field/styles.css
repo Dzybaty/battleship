@@ -1,0 +1,14 @@
+.field-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.field-box {
+  display: flex;
+  border: 1px solid black;
+  padding: 0;
+  width: 320px;
+  min-width: 320px;
+  flex-wrap: wrap;
+  flex-direction: row;
+}

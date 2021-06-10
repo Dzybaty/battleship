@@ -1,0 +1,16 @@
+.ship-wrapper {
+  display: flex;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.ship-wrapper.placed {
+  cursor: not-allowed;
+  color: lightgray;
+}
+
+.ship-block {
+  width: 30px;
+  height: 30px;
+  border: 1px solid;
+}

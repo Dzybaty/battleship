@@ -1,0 +1,18 @@
+.cell {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  border: 1px dotted lightblue;
+  height: 32px;
+  width: 32px;
+}
+
+.cell.occupied {
+  border: 1px solid black;
+}
+
+.cell.hidden {
+  border: 1px dotted lightblue;
+  cursor: pointer;
+}
